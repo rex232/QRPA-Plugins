@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    DHL Express third-party plugin project: create shipment, print label, query order status.
+    It talks to the MyDHL API (REST/JSON, OAuth2 client_credentials).
+
+    Key points:
+      1. The assembly name must contain "Plugin" (PluginHost scans by name) -> AssemblyName already includes Plugin.
+      2. Implement IActivityPlugin from QRpa.Core and call ActivityRegistry.RegisterPlugin(...) inside Register().
+      3. Output goes straight to samples\plugins: drop the DLL into the plugins folder next to any host (Robot/Studio) and it is auto-loaded.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.19041</TargetFramework>
+    <AssemblyName>DhlExpressPlugin</AssemblyName>
+    <RootNamespace>DhlExpressPlugin</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>$(MSBuildThisFileDirectory)..\plugins\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    YTO Express third-party plugin project: order create, label print, and track query.
+
+    Open-source information: this project is open-sourced under the MIT License (Copyright Queeny App).
+    See YtoExpressPlugin.cs for detailed notes.
+
+    Key points:
+      1. The assembly name must contain "Plugin" (PluginHost scans by name); AssemblyName already includes Plugin.
+      2. Implement IActivityPlugin from QRpa.Core and call ActivityRegistry.RegisterPlugin(...) inside Register().
+      3. The output goes straight to samples\plugins: drop the DLL into the plugins folder next to any host
+         (Robot/Studio) and it is auto-loaded.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.19041</TargetFramework>
+    <AssemblyName>YtoExpressPlugin</AssemblyName>
+    <RootNamespace>YtoExpressPlugin</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>$(MSBuildThisFileDirectory)..\plugins\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+</Project>

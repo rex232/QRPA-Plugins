@@ -1,0 +1,23 @@
+<Project>
+
+  <!--
+    Shared compile-time reference for every plugin in this repository.
+
+    QRpa.Core.dll is kept in lib\ so the repository is self-contained:
+    clone and build, no need to install or download the main QRpa project.
+
+    Private=false: the DLL is for compilation only. It must NOT be copied into
+    the plugins output folder, because the host (Robot / Studio) already ships
+    the same assembly at runtime (double loading would fail).
+
+    Keep lib\QRpa.Core.dll in sync with the QRpa version you target. When the
+    host is upgraded, replace this file with the matching QRpa.Core.dll.
+  -->
+  <ItemGroup>
+    <Reference Include="QRpa.Core">
+      <HintPath>$(MSBuildThisFileDirectory)lib\QRpa.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

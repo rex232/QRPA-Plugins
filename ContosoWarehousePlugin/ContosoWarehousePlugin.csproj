@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    第三方插件示範專案：展示如何為 QRpa 注入倉庫活動。
+    Demo third-party plugin project: shows how to inject warehouse activities into QRpa.
+    要點（Key points）：
+      1. 組件名必須含 "Plugin"（PluginHost 按名掃描）→ AssemblyName 已包含 Plugin。
+         The assembly name must contain "Plugin" (PluginHost scans by name) → AssemblyName already includes Plugin.
+      2. 實作 QRpa.Core 的 IActivityPlugin，於 Register() 內呼叫 ActivityRegistry.RegisterPlugin(...)。
+         Implement IActivityPlugin from QRpa.Core and call ActivityRegistry.RegisterPlugin(...) inside Register().
+      3. 產物直接輸出到 samples\plugins：把 DLL 放入任何主機（Robot/Studio）旁的 plugins 資料夾即自動載入。
+         Output goes straight to samples\plugins: drop the DLL into the plugins folder next to any host (Robot/Studio) and it is auto-loaded.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.19041</TargetFramework>
+    <AssemblyName>ContosoWarehousePlugin</AssemblyName>
+    <RootNamespace>ContosoWarehousePlugin</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>$(MSBuildThisFileDirectory)..\plugins\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+</Project>

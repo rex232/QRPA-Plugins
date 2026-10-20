@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Ecom Orders third-party plugin: an e-commerce order source backed by the
+    Shopify Admin REST API, with two activities (Eco.PullOrders, Eco.OrderById).
+
+    Key points:
+      1. The assembly name must contain "Plugin" (PluginHost scans by name) -> AssemblyName includes Plugin.
+      2. Implement IActivityPlugin from QRpa.Core and call ActivityRegistry.RegisterPlugin(...) inside Register().
+      3. Output goes straight to samples\plugins: drop the DLL into the plugins folder next to any host (Robot/Studio) and it is auto-loaded.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.19041</TargetFramework>
+    <AssemblyName>EcomOrdersPlugin</AssemblyName>
+    <RootNamespace>EcomOrdersPlugin</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>$(MSBuildThisFileDirectory)..\plugins\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+</Project>
