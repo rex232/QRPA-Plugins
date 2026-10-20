@@ -9,6 +9,16 @@ Each subfolder is a standalone plugin class library. It implements
 `ActivityRegistry.RegisterPlugin(...)` inside `Register()`. After building, drop the DLL into the
 `plugins` folder next to the host application (Robot / Studio) and it is loaded automatically.
 
+## Screenshots
+
+QRPA Studio flow designer: action menu on the left, flow steps in the middle, activity arguments on the right.
+
+![QRPA Studio flow designer](docs/images/studio-flow.png)
+
+QRPA Recorder: record website or window actions and turn them into a flow step by step.
+
+![QRPA Recorder](docs/images/recorder.png)
+
 ## Plugin overview
 
 | Folder | Plugin ID | Activities | Purpose |

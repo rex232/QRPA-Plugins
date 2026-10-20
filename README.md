@@ -9,6 +9,16 @@ QRPA - https://www.qrpaapp.com
 `ActivityRegistry.RegisterPlugin(...)` 註冊活動。編譯後的 DLL 放入主程式（Robot / Studio）旁的
 `plugins` 資料夾即會自動載入。
 
+## 畫面
+
+QRPA 錄製器（Recorder）：錄製網站或視窗操作，逐步轉成流程。
+
+![QRPA 錄製器](docs/images/recorder.png)
+
+QRPA Studio 流程設計器：左側動作選單、中間流程步驟、右側活動參數。
+
+![QRPA Studio 流程設計器](docs/images/studio-flow.png)
+
 ## 插件一覽
 
 | 目錄 | 插件 ID | 活動 | 用途 |
