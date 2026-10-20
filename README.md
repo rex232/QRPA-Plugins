@@ -1,6 +1,9 @@
 # QRPA-Plugins
 
-QApp.QRpa 的第三方活動插件集合（Free RPA tool）。
+這是QRPA的第三方活動插件集合。
+
+QRPA - https://www.qrpaapp.com
+
 
 每個子目錄是一個獨立的外掛類別庫，實作 `QRpa.Core.IActivityPlugin`，於 `Register()` 內以
 `ActivityRegistry.RegisterPlugin(...)` 註冊活動。編譯後的 DLL 放入主程式（Robot / Studio）旁的
