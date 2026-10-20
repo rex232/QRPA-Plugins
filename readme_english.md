@@ -13,6 +13,8 @@ Each subfolder is a standalone plugin class library. It implements
 
 QRPA Studio flow designer: action menu on the left, flow steps in the middle, activity arguments on the right.
 
+![QRPA Studio flow designer](docs/images/studio-flow1.png)
+
 ![QRPA Studio flow designer](docs/images/studio-flow.png)
 
 QRPA Recorder: record website or window actions and turn them into a flow step by step.
