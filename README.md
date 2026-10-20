@@ -11,13 +11,15 @@ QRPA - https://www.qrpaapp.com
 
 ## 畫面
 
+QRPA Studio 流程設計器：左側動作選單、中間流程步驟、右側活動參數。
+
+![QRPA Studio 流程設計器](docs/images/studio-flow.png)
+
 QRPA 錄製器（Recorder）：錄製網站或視窗操作，逐步轉成流程。
 
 ![QRPA 錄製器](docs/images/recorder.png)
 
-QRPA Studio 流程設計器：左側動作選單、中間流程步驟、右側活動參數。
 
-![QRPA Studio 流程設計器](docs/images/studio-flow.png)
 
 ## 插件一覽
 
